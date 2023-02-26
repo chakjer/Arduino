@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang=pl>
+
+<head>
+  <title>ESP32 </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="innertube">
+      <h1>ESP32 - %statusNazwaHosta%</h1>
+    </div>
+  </header>
+
+  <div id="wrapper">
+
+    <main>
+      <div id="content">
+        <div class="innertube">
+          <h1>Status</h1>
+          <table>
+            <tr>
+              <th class="lewa">Adres IP:</th>
+              <th class="prawa">%statusIpAdres%</th>
+            </tr>
+            <tr>
+              <th class="lewa">Nazwa sieci:</th>
+              <th class="prawa">%statusNazwaSieci%</th>
+            </tr>
+            <tr>
+              <th class="lewa">Czas uruchomienia:</th>
+              <th class="prawa">%statusGodzina%</th>
+            </tr>
+          </table>
+        </div>
+        <div id="przyciski">
+          <button onclick="reboot()">Reboot</button>
+        </div>
+      </div>
+    </main>
+
+    <nav id="nav">
+      <div class="innertube">
+        <dl>
+          <dt>Menu</dt>
+          <dd><a href="/">Strona główna</a></dd>
+          <dd><a href="ustawienia.html">Ustawienia</a></dd>
+          <dt>Narzędzia</dt>
+          <dd><a href="webserial" target="_blank">Konsola</a></dd>
+          <dd><a href="update" target="_blank">OTA</a></dd>
+        </dl>
+      </div>
+    </nav>
+
+  </div>
+
+  <footer id="footer">
+    <div class="innertube">
+      <p> </p>
+    </div>
+  </footer>
+  <script>
+    function reboot() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", "reboot", true);
+      xhttp.send();
+    }
+
+
+
+
+  </script>
+
+</body>
+
+</html>
