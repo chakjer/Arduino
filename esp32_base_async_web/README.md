@@ -1,6 +1,10 @@
 ## Podstawowy szablon dla projektów.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![esp32: IoT](https://img.shields.io/badge/esp32-IoT-red)]()
+[![esp32: MQTT](https://img.shields.io/badge/esp32-MQTT-blue)]()
 
-### Zaimplementowane:
+Szablon zawiera podstawowe rzeczy aby uruchomić esp32. Cała konfiguracja uruchomiona jest na core0, core1 jest wolny dla naszego głównego programu.
+### Moduły:
 1. WiFi
     - Klient wifi łączy się do wcześniej zdefiniowanej sieci lub
 tworzy własną sieć **InitWifi**.
@@ -29,6 +33,6 @@ Cały program chodzi na core0, konfiguracja zapisywana jest na wewnetrznym syste
 <img src="schemat.png" width=50% height=50%>
 
 
-### Linki
+## Linki
 1. Odczyty NTP [https://randomnerdtutorials.com/epoch-unix-time-esp32-arduino/](https://randomnerdtutorials.com/epoch-unix-time-esp32-arduino/)
-2. Zmiana czasu EPOCH na ludzki [https://www.geeksforgeeks.org/convert-unix-timestamp-to-dd-mm-yyyy-hhmmss-format/](https://www.geeksforgeeks.org/convert-unix-timestamp-to-dd-mm-yyyy-hhmmss-format/)
+2. Zmiana czasu EPOCH na bardziej ludzki [https://www.geeksforgeeks.org/convert-unix-timestamp-to-dd-mm-yyyy-hhmmss-format/](https://www.geeksforgeeks.org/convert-unix-timestamp-to-dd-mm-yyyy-hhmmss-format/)
