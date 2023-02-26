@@ -1,5 +1,5 @@
 ## Podstawowy szablon dla projektów.
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/License)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)
 [![esp32: IoT](https://img.shields.io/badge/esp32-IoT-red)]()
 [![esp32: MQTT](https://img.shields.io/badge/esp32-MQTT-blue)]()
 
