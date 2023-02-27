@@ -185,23 +185,23 @@ void core0loop( void * parameter) {
 }
 //sprzetowy lub wewnetrzny
 void rtcSprawdzCzas() {
+  czasRTCBlokada = 1;
   if (zegarRTC.isRunning()) {
-    czasRTC = zegarRTC.getEpoch();
-    rtcWewnetrzny.setTime(czasRTC);
-    if ( czasRTC != czasRTC) {
-      czasRTCBlokada = 1;
+    if ( czasRTC != zegarRTC.getEpoch()) {
       String core = "[Core " + String(xPortGetCoreID()) + "]";
-      czasLokalny = DOM.toLocal(czasRTC + ntpKonfig.strefa * 3600, &tcr);
+      czasLokalny = DOM.toLocal(zegarRTC.getEpoch() + ntpKonfig.strefa * 3600, &tcr);
       rtcTyp = false;
       //Serial.println(core + "[RTC] aktualny czas: " + String(unixTimeToHumanReadable(czasLokalny)));
-      czasRTCBlokada = 0;
     }
+    rtcWewnetrzny.setTime(zegarRTC.getEpoch());
   } else {
     czasLokalny = DOM.toLocal(rtcWewnetrzny.getEpoch() + ntpKonfig.strefa * 3600, &tcr);
     rtcTyp = true;
 
   }
+  czasRTCBlokada = 0;
 }
+
 void loop() {
 
   delay(1000);
